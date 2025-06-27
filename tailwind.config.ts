@@ -93,8 +93,8 @@ export default {
 			},
 			fontFamily: {
 				inter: ['Inter', 'sans-serif'],
-				orbitron: ['Orbitron', 'monospace'],
-				exo: ['Exo 2', 'sans-serif'],
+				mono: ['JetBrains Mono', 'monospace'],
+				'space-grotesk': ['Space Grotesk', 'sans-serif'],
 			}
 		}
 	},
