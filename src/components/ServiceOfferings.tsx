@@ -9,7 +9,7 @@ const ServiceOfferings = () => {
       title: "AI Readiness Audits",
       price: "₹25,000 - ₹75,000",
       period: "per engagement",
-      color: "from-blue-400 to-cyan-600",
+      color: "text-emerald-700",
       tier: "Foundation",
       features: [
         "Comprehensive AI maturity assessment",
@@ -23,7 +23,7 @@ const ServiceOfferings = () => {
       title: "Strategic AI Roadmaps",
       price: "₹50,000 - ₹2,00,000",
       period: "per project",
-      color: "from-[#00f0ff] to-[#0080ff]",
+      color: "text-gray-900",
       tier: "Strategy",
       features: [
         "Custom AI transformation strategy",
@@ -37,7 +37,7 @@ const ServiceOfferings = () => {
       title: "Implementation Services",
       price: "₹1,00,000 - ₹5,00,000",
       period: "per deployment",
-      color: "from-[#b967ff] to-[#8b4eff]",
+      color: "text-emerald-700",
       tier: "Enterprise",
       popular: true,
       features: [
@@ -52,7 +52,7 @@ const ServiceOfferings = () => {
       title: "Fractional CAIO",
       price: "₹25,000 - ₹75,000",
       period: "per month",
-      color: "from-[#ffd700] to-[#ffb700]",
+      color: "text-gray-900",
       tier: "Executive",
       features: [
         "Part-time Chief AI Officer services",
@@ -64,97 +64,96 @@ const ServiceOfferings = () => {
   ];
 
   return (
-    <section id="services" className="cinematic-section bg-gradient-to-b from-[#151922] to-[#0a0e17]">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 glass-card px-4 py-2 mb-6">
-            <Crown className="w-5 h-5 text-[#ffd700]" />
-            <span className="text-sm font-agile text-gray-300 uppercase tracking-wider">Service Portfolio</span>
+    <section id="services" className="section-spacing bg-gray-50">
+      <div className="section-container">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 frosted-glass px-4 py-2 mb-6">
+            <Crown className="w-4 h-4 text-emerald-700" />
+            <span className="text-tiny font-medium text-gray-700 uppercase tracking-wider">Service Portfolio</span>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-mooxy font-black text-white mb-6 floating-text">
+          <h2 className="text-section-title text-gray-900 mb-4 fade-in-up">
             Service Offerings
-            <span className="block bg-gradient-to-r from-[#ffd700] to-[#ffb700] bg-clip-text text-transparent">
-              & Pricing
-            </span>
+            <span className="block text-gradient">& Pricing</span>
           </h2>
-          <p className="text-xl font-agile text-gray-400">
+          <p className="text-body-large text-gray-600 fade-in-up">
             Flexible engagement models tailored to your transformation journey
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {services.map((service, index) => (
-            <div key={index} className="group relative">
+            <div key={index} className="group relative fade-in-up" style={{animationDelay: `${0.1 * index}s`}}>
               
               {/* Popular Badge */}
               {service.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                  <div className="glass-card px-4 py-1 bg-gradient-to-r from-[#b967ff] to-[#8b4eff] border border-[#b967ff]/30">
-                    <span className="text-xs font-agile font-bold text-white uppercase tracking-wider">Most Popular</span>
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                  <div className="frosted-glass px-3 py-1 bg-emerald-50 border border-emerald-200">
+                    <span className="text-tiny font-bold text-emerald-700 uppercase tracking-wider">Most Popular</span>
                   </div>
                 </div>
               )}
 
-              <div className={`glass-card p-6 hover-zoom transition-all duration-500 h-full relative overflow-hidden ${service.popular ? 'border-[#b967ff]/50 shadow-lg shadow-[#b967ff]/20' : ''}`}>
+              <div className={`frosted-glass p-6 hover-lift h-full relative overflow-hidden ${service.popular ? 'border-emerald-300 shadow-lg shadow-emerald-100' : ''}`}>
                 
                 {/* Service Tier Badge */}
                 <div className="flex items-center justify-between mb-4">
-                  <div className={`w-10 h-10 rounded-full bg-gradient-to-br ${service.color} p-0.5 group-hover:scale-110 transition-transform duration-300`}>
-                    <div className="w-full h-full rounded-full bg-[#0a0e17] flex items-center justify-center">
-                      <service.icon className="w-5 h-5 text-white" />
+                  <div className="w-10 h-10 rounded-full bg-gray-100 p-0.5 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
+                      <service.icon className={`w-5 h-5 ${service.color}`} />
                     </div>
                   </div>
-                  <span className={`text-xs font-agile font-bold px-3 py-1 rounded-full bg-gradient-to-r ${service.color} bg-opacity-20 text-white`}>
+                  <span className={`text-tiny font-bold px-3 py-1 rounded-full bg-gray-100 ${service.color}`}>
                     {service.tier}
                   </span>
                 </div>
 
-                <h3 className="text-xl font-agile font-bold text-white mb-2 group-hover:text-[#00f0ff] transition-colors duration-300">
+                <h3 className="text-subsection-title text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors duration-300">
                   {service.title}
                 </h3>
                 
                 {/* Pricing */}
-                <div className="mb-6">
-                  <span className={`data-counter text-2xl font-black bg-gradient-to-r ${service.color} bg-clip-text text-transparent`}>
+                <div className="mb-4">
+                  <span className={`stat-counter text-xl font-bold ${service.color}`}>
                     {service.price}
                   </span>
-                  <span className="text-gray-400 text-sm font-agile block">
+                  <span className="text-gray-600 text-small block">
                     {service.period}
                   </span>
                 </div>
 
                 {/* Features */}
-                <ul className="space-y-3 mb-6">
+                <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="text-sm text-gray-300 flex items-start font-inter">
-                      <CheckCircle className="w-4 h-4 text-[#00f0ff] mr-3 mt-0.5 flex-shrink-0" />
+                    <li key={featureIndex} className="text-small text-gray-600 flex items-start">
+                      <CheckCircle className="w-4 h-4 text-emerald-700 mr-2 mt-0.5 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
                 {/* CTA Button */}
-                <button className={`w-full py-3 rounded-lg font-agile font-semibold text-white transition-all duration-300 bg-gradient-to-r ${service.color} hover:scale-105 hover:shadow-lg relative overflow-hidden group`}>
-                  <span className="relative z-10">Get Started</span>
-                  <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+                <button className="w-full professional-button text-center">
+                  Get Started
                 </button>
 
-                {/* Hover Accent */}
-                <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${service.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`} />
-                
-                {/* Glow Effect */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500 blur-xl`} />
+                {/* Progress Indicator */}
+                <div className="mt-4 bg-gray-200 rounded-full h-1 overflow-hidden">
+                  <div 
+                    className="h-full bg-emerald-600 transition-all duration-1000 ease-out group-hover:w-full"
+                    style={{ width: '60%' }}
+                  />
+                </div>
               </div>
             </div>
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 text-center">
-          <div className="glass-card inline-block px-8 py-4">
-            <p className="text-gray-300 font-agile">
-              <span className="text-[#ffd700] font-bold">Custom Enterprise Packages:</span> Tailored solutions for unique requirements
+        <div className="mt-12 text-center fade-in-up">
+          <div className="frosted-glass inline-block px-8 py-4 hover-lift">
+            <p className="text-body text-gray-700">
+              <span className="text-emerald-700 font-bold">Custom Enterprise Packages:</span> Tailored solutions for unique requirements
             </p>
           </div>
         </div>
