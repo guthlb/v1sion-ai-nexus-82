@@ -27,57 +27,60 @@ const WhyAIFails = () => {
   return (
     <section className="section-spacing bg-gray-50">
       <div className="section-container">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 glass-card px-4 py-2 mb-6 hover-lift">
-            <TrendingDown className="w-4 h-4 text-red-500" />
-            <span className="text-sm font-medium text-gray-700 uppercase tracking-wider">The Challenge</span>
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 frosted-glass px-6 py-3 mb-8 hover-lift">
+            <TrendingDown className="w-5 h-5 text-red-600 animated-icon" />
+            <span className="text-sm font-semibold text-gray-800 uppercase tracking-wider">The Challenge</span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-mooxy font-bold text-gray-900 mb-6 fade-in-up">
+          <h2 className="text-5xl md:text-6xl font-mooxy font-bold text-gray-900 mb-8 fade-in-up">
             Why AI Transformations
-            <span className="block text-red-600 mt-2">Fail</span>
+            <span className="block text-red-600 mt-4">Fail</span>
           </h2>
-          <p className="text-xl font-agile text-gray-600 max-w-3xl mx-auto fade-in-up" style={{animationDelay: '0.2s'}}>
+          <p className="text-2xl font-agile text-gray-600 max-w-4xl mx-auto fade-in-up leading-relaxed" style={{animationDelay: '0.2s'}}>
             Understanding the critical barriers that prevent successful AI adoption
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {challenges.map((challenge, index) => (
-            <div key={index} className="group fade-in-up" style={{animationDelay: `${0.1 * index}s`}}>
-              <div className="glass-card p-8 text-center hover-lift h-full relative overflow-hidden">
+            <div key={index} className="group fade-in-up" style={{animationDelay: `${0.2 * index}s`}}>
+              <div className="frosted-glass p-8 text-center hover-lift h-full relative overflow-hidden">
                 
-                {/* Background Pattern */}
-                <div className="absolute inset-0 code-bg opacity-20" />
+                {/* Animated Background Pattern */}
+                <div className="absolute inset-0 digital-mesh opacity-20" />
                 
                 {/* Stat Badge */}
-                <div className="absolute top-4 right-4 bg-red-50 text-red-600 px-3 py-1 rounded-full text-sm font-mono font-semibold">
+                <div className="absolute top-6 right-6 bg-red-50 text-red-700 px-4 py-2 rounded-full text-sm font-mono font-bold border border-red-200">
                   {challenge.stat}
                 </div>
 
-                {/* Icon */}
-                <div className="relative mb-6 z-10">
-                  <div className="w-16 h-16 mx-auto bg-gray-100 rounded-2xl flex items-center justify-center group-hover:bg-red-50 transition-colors duration-300">
-                    <challenge.icon className="w-8 h-8 text-gray-700 group-hover:text-red-600 transition-colors duration-300" />
+                {/* Animated Icon */}
+                <div className="relative mb-8 z-10">
+                  <div className="w-20 h-20 mx-auto bg-gray-100 rounded-3xl flex items-center justify-center group-hover:bg-red-50 transition-all duration-500 border border-gray-200">
+                    <challenge.icon className="w-10 h-10 text-gray-700 group-hover:text-red-600 transition-all duration-500 animated-icon" />
                   </div>
                 </div>
 
-                <h3 className="text-xl font-agile font-semibold text-gray-900 mb-4 relative z-10">
+                <h3 className="text-2xl font-agile font-bold text-gray-900 mb-6 relative z-10">
                   {challenge.title}
                 </h3>
-                <p className="text-gray-600 font-inter leading-relaxed relative z-10">
+                <p className="text-gray-600 font-inter leading-relaxed text-lg relative z-10">
                   {challenge.description}
                 </p>
+
+                {/* Hover accent line */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 to-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center" />
               </div>
             </div>
           ))}
         </div>
 
         {/* Bottom Insight */}
-        <div className="mt-16 text-center fade-in-up" style={{animationDelay: '0.6s'}}>
-          <div className="glass-card inline-block px-8 py-4 hover-lift">
-            <span className="stat-counter text-2xl font-bold text-red-600 mr-2">₹257T</span>
-            <span className="text-gray-600 font-agile">lost annually to poor AI implementation</span>
+        <div className="mt-20 text-center fade-in-up" style={{animationDelay: '0.8s'}}>
+          <div className="frosted-glass inline-block px-12 py-6 hover-lift">
+            <span className="stat-counter text-3xl font-bold text-red-600 mr-3">₹257T</span>
+            <span className="text-gray-700 font-agile text-xl">lost annually to poor AI implementation</span>
           </div>
         </div>
       </div>
