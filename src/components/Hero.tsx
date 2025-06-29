@@ -3,15 +3,15 @@ import { ArrowRight, Mail, Phone, Sparkles } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
+    <section className="relative min-h-screen flex items-end justify-center bg-white overflow-hidden pb-32">
       {/* Subtle Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200/40 to-transparent" />
         <div className="absolute bottom-1/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-200/30 to-transparent" />
       </div>
       
-      {/* Content */}
-      <div className="section-container relative z-10">
+      {/* Content - Positioned in lower portion of viewport */}
+      <div className="section-container relative z-10 w-full">
         <div className="max-w-6xl mx-auto text-center">
           
           {/* Professional Badge */}
@@ -20,7 +20,7 @@ const Hero = () => {
             <span className="text-sm font-medium text-gray-700 tracking-wide">Enterprise AI Transformation</span>
           </div>
 
-          {/* Main Headline - Reduced Size for Better Balance */}
+          {/* Main Headline - Positioned Lower */}
           <div className="mb-8">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-mooxy font-black text-gray-900 leading-[0.9] tracking-tight fade-in-up">
               Strategic AI-Native
