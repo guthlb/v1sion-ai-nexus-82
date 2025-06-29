@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -95,6 +94,7 @@ export default {
 				inter: ['Inter', 'sans-serif'],
 				mono: ['JetBrains Mono', 'monospace'],
 				'space-grotesk': ['Space Grotesk', 'sans-serif'],
+				tomorrow: ['Tomorrow', 'sans-serif'],
 			}
 		}
 	},

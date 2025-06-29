@@ -21,11 +21,11 @@ const Hero = () => {
         {/* Only Main Heading on First Screen */}
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-mooxy font-bold leading-tight fade-in-up">
-              <span className="block text-white drop-shadow-lg">
+            <h1 className="text-5xl md:text-7xl font-tomorrow font-black leading-tight fade-in-up">
+              <span className="block text-white drop-shadow-2xl">
                 Strategic AI-Native
               </span>
-              <span className="block bg-gradient-to-r from-green-300 via-green-200 to-emerald-400 bg-clip-text text-transparent mt-2 drop-shadow-lg">
+              <span className="block bg-gradient-to-r from-green-300 via-green-200 to-emerald-400 bg-clip-text text-transparent mt-2 drop-shadow-2xl">
                 Transformation
               </span>
             </h1>

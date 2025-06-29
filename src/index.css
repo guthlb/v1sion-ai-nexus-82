@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow:wght@400;500;600;700;800;900&display=swap');
 
 /* Light Theme Design System Variables */
 @layer base {
@@ -86,9 +87,16 @@
     font-family: 'JetBrains Mono', monospace;
   }
   
+  /* Tomorrow Font for Hero */
+  .font-tomorrow {
+    font-family: 'Tomorrow', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  
   /* Typography Scale */
   .text-hero {
-    @apply text-5xl md:text-7xl font-mooxy font-bold leading-tight;
+    @apply text-5xl md:text-7xl font-tomorrow font-black leading-tight;
   }
   
   .text-section-title {
@@ -113,11 +121,6 @@
   
   .text-tiny {
     @apply text-xs font-inter leading-relaxed;
-  }
-
-  /* Custom utility for full screen height */
-  .mt-screen {
-    margin-top: 100vh;
   }
 }
 
