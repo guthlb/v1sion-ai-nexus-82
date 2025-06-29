@@ -114,6 +114,11 @@
   .text-tiny {
     @apply text-xs font-inter leading-relaxed;
   }
+
+  /* Custom utility for full screen height */
+  .mt-screen {
+    margin-top: 100vh;
+  }
 }
 
 /* Sophisticated Light Theme Animations */
