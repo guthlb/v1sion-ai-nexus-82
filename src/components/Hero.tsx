@@ -1,22 +1,49 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { ArrowRight, Mail, Phone, Sparkles } from 'lucide-react';
 
 const Hero = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (videoRef.current) {
+        const scrolled = window.pageYOffset;
+        const parallaxSpeed = 0.5;
+        
+        // Apply parallax transform to video
+        videoRef.current.style.transform = `translateY(${scrolled * parallaxSpeed}px) scale(1.1)`;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
-      {/* First Screen - Video with Only Main Heading */}
-      <section className="relative min-h-screen w-full bg-white overflow-hidden">
-        {/* Video Background */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover z-0"
-        >
-          <source src="/public/Strategic.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      {/* First Screen - Video with Parallax Effect and Only Main Heading */}
+      <section className="relative min-h-screen w-full bg-black overflow-hidden">
+        {/* Video Background with Parallax */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <video
+            ref={videoRef}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-75 ease-out"
+            style={{ 
+              transform: 'scale(1.1)',
+              willChange: 'transform'
+            }}
+          >
+            <source src="/public/Strategic.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          
+          {/* Video Overlay for Better Text Contrast */}
+          <div className="absolute inset-0 bg-black/20 z-5"></div>
+        </div>
 
         {/* Only Main Heading on First Screen */}
         <div className="absolute inset-0 flex items-center justify-center z-10">
@@ -31,10 +58,19 @@ const Hero = () => {
             </h1>
           </div>
         </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+          <div className="animate-bounce">
+            <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+              <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Second Screen - Content Below Video */}
-      <section className="section-spacing bg-white">
+      <section className="section-spacing bg-white relative z-20">
         <div className="section-container">
           <div className="text-center flex flex-col items-center">
             {/* Professional Badge */}
