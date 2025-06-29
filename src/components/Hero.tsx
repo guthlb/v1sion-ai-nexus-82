@@ -7,12 +7,6 @@ const Hero = () => {
       {/* Animated Digital Mesh Background */}
       <div className="absolute inset-0 digital-mesh opacity-40" />
       
-      {/* Subtle Data Flow Lines */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent data-flow" />
-        <div className="absolute top-3/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-600/20 to-transparent data-flow" style={{animationDelay: '1.5s'}} />
-      </div>
-      
       {/* Content */}
       <div className="section-container relative z-10">
         <div className="max-w-5xl mx-auto text-center">
