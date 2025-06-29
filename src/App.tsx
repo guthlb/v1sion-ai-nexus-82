@@ -8,6 +8,7 @@ import OurApproachPage from "./pages/OurApproach";
 import ServicesPage from "./pages/Services";
 import ImpactPage from "./pages/Impact";
 import BlogPage from "./pages/Blog";
+import KitsPage from "./pages/Kits";
 import GetStartedPage from "./pages/GetStarted";
 import NotFound from "./pages/NotFound";
 
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/impact" element={<ImpactPage />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/kits" element={<KitsPage />} />
           <Route path="/get-started" element={<GetStartedPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
