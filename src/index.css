@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -347,4 +346,40 @@
     animation: none;
     transition: none;
   }
+}
+
+/* Remove any cursor/caret animations */
+* {
+  caret-color: transparent;
+}
+
+/* Ensure no blinking cursor effects on any text elements */
+h1, h2, h3, h4, h5, h6, p, span, div, a, button {
+  caret-color: transparent;
+}
+
+/* Remove any potential typing animation effects */
+.typewriter,
+.typing,
+.cursor,
+.blink {
+  animation: none !important;
+}
+
+/* Remove cursor blink animation if it exists */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.blink,
+.cursor-blink,
+.animate-pulse {
+  animation: none !important;
+}
+
+/* Ensure static text display */
+.static-text {
+  animation: none !important;
+  transition: none !important;
 }
