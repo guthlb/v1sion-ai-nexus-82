@@ -85,7 +85,7 @@ const Hero = () => {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8 fade-in-up">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12 fade-in-up">
               <button className="professional-button group flex items-center justify-center gap-4 text-lg">
                 Schedule AI Readiness Assessment
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
@@ -95,23 +95,54 @@ const Hero = () => {
               </button>
             </div>
 
-            {/* Contact Info */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-gray-700 fade-in-up">
-              <div className="frosted-glass px-6 py-4 flex items-center gap-3 hover-lift elegant-underline">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 to-emerald-600 p-0.5">
-                  <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
-                    <Mail className="w-5 h-5 text-gray-800" />
+            {/* Redesigned Contact Info - Compact & Professional */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 fade-in-up">
+              {/* Email Contact */}
+              <a 
+                href="mailto:hello@v1sion.ai" 
+                className="group inline-flex items-center gap-3 px-4 py-2.5 bg-white/80 backdrop-blur-sm border border-gray-200/60 rounded-xl hover:bg-white hover:border-emerald-200 hover:shadow-md transition-all duration-300"
+              >
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-emerald-600 p-0.5 group-hover:scale-105 transition-transform duration-300">
+                  <div className="w-full h-full rounded-lg bg-white flex items-center justify-center">
+                    <Mail className="w-4 h-4 text-emerald-600" />
                   </div>
                 </div>
-                <span className="font-semibold text-lg">hello@v1sion.ai</span>
-              </div>
-              <div className="frosted-glass px-6 py-4 flex items-center gap-3 hover-lift elegant-underline">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-600 to-amber-500 p-0.5">
-                  <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
-                    <Phone className="w-5 h-5 text-gray-800" />
+                <span className="text-sm font-medium text-gray-700 group-hover:text-emerald-700 transition-colors duration-300">
+                  hello@v1sion.ai
+                </span>
+              </a>
+              
+              {/* Phone Contact */}
+              <a 
+                href="tel:+919876543210" 
+                className="group inline-flex items-center gap-3 px-4 py-2.5 bg-white/80 backdrop-blur-sm border border-gray-200/60 rounded-xl hover:bg-white hover:border-gray-300 hover:shadow-md transition-all duration-300"
+              >
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-gray-600 to-gray-700 p-0.5 group-hover:scale-105 transition-transform duration-300">
+                  <div className="w-full h-full rounded-lg bg-white flex items-center justify-center">
+                    <Phone className="w-4 h-4 text-gray-600" />
                   </div>
                 </div>
-                <span className="font-semibold text-lg">+91-9876543210</span>
+                <span className="text-sm font-medium text-gray-700 group-hover:text-gray-900 transition-colors duration-300">
+                  +91-9876543210
+                </span>
+              </a>
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="mt-8 fade-in-up">
+              <div className="inline-flex items-center gap-6 px-6 py-3 bg-gray-50/80 backdrop-blur-sm border border-gray-200/40 rounded-full">
+                <div className="flex items-center gap-2 text-xs font-medium text-gray-600">
+                  <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                  <span>Enterprise Ready</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs font-medium text-gray-600">
+                  <div className="w-2 h-2 rounded-full bg-emerald-600"></div>
+                  <span>ISO Compliant</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs font-medium text-gray-600">
+                  <div className="w-2 h-2 rounded-full bg-gray-900"></div>
+                  <span>24/7 Support</span>
+                </div>
               </div>
             </div>
           </div>
