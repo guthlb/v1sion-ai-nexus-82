@@ -1,11 +1,13 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Cpu } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,9 +20,22 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
+  const navigateToPage = (path: string) => {
+    navigate(path);
+    setIsMobileMenuOpen(false);
+  };
+
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        element?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
     setIsMobileMenuOpen(false);
   };
 
@@ -31,7 +46,7 @@ const Navigation = () => {
           <div className="flex items-center justify-between">
             
             {/* Logo */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigateToPage('/')}>
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-amber-500 to-emerald-600 p-0.5">
                 <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
                   <Cpu className="w-6 h-6 text-gray-800" />
@@ -45,25 +60,25 @@ const Navigation = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               <button 
-                onClick={() => scrollToSection('approach')} 
+                onClick={() => navigateToPage('/our-approach')} 
                 className="text-gray-700 hover:text-gray-900 transition-colors font-agile font-semibold elegant-underline"
               >
                 Our Approach
               </button>
               <button 
-                onClick={() => scrollToSection('services')} 
+                onClick={() => navigateToPage('/services')} 
                 className="text-gray-700 hover:text-gray-900 transition-colors font-agile font-semibold elegant-underline"
               >
                 Services
               </button>
               <button 
-                onClick={() => scrollToSection('impact')} 
+                onClick={() => navigateToPage('/impact')} 
                 className="text-gray-700 hover:text-gray-900 transition-colors font-agile font-semibold elegant-underline"
               >
                 Impact
               </button>
               <button 
-                onClick={() => scrollToSection('services')} 
+                onClick={() => navigateToPage('/blog')} 
                 className="text-gray-700 hover:text-gray-900 transition-colors font-agile font-semibold elegant-underline"
               >
                 Blog
@@ -93,22 +108,28 @@ const Navigation = () => {
           {isMobileMenuOpen && (
             <div className="md:hidden mt-4 frosted-glass p-6 space-y-4 rounded-2xl">
               <button 
-                onClick={() => scrollToSection('approach')} 
+                onClick={() => navigateToPage('/our-approach')} 
                 className="block w-full text-left text-gray-700 hover:text-gray-900 transition-colors font-agile font-semibold py-3 elegant-underline"
               >
                 Our Approach
               </button>
               <button 
-                onClick={() => scrollToSection('services')} 
+                onClick={() => navigateToPage('/services')} 
                 className="block w-full text-left text-gray-700 hover:text-gray-900 transition-colors font-agile font-semibold py-3 elegant-underline"
               >
                 Services
               </button>
               <button 
-                onClick={() => scrollToSection('impact')} 
+                onClick={() => navigateToPage('/impact')} 
                 className="block w-full text-left text-gray-700 hover:text-gray-900 transition-colors font-agile font-semibold py-3 elegant-underline"
               >
                 Impact
+              </button>
+              <button 
+                onClick={() => navigateToPage('/blog')} 
+                className="block w-full text-left text-gray-700 hover:text-gray-900 transition-colors font-agile font-semibold py-3 elegant-underline"
+              >
+                Blog
               </button>
               <button 
                 onClick={() => scrollToSection('contact')} 
