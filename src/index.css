@@ -5,7 +5,7 @@
 /* Professional Light Theme Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap');
 
 /* Light Theme Design System Variables */
 @layer base {
@@ -68,17 +68,18 @@
   }
 }
 
-/* Improved Typography Hierarchy */
+/* Enhanced Typography Hierarchy */
 @layer utilities {
   .font-mooxy {
     font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-weight: 900;
+    letter-spacing: -0.025em;
+    line-height: 0.85;
   }
   
   .font-agile {
     font-family: 'Inter', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: -0.01em;
   }
   
@@ -86,13 +87,13 @@
     font-family: 'JetBrains Mono', monospace;
   }
   
-  /* Typography Scale */
+  /* Enhanced Typography Scale */
   .text-hero {
-    @apply text-5xl md:text-7xl font-mooxy font-bold leading-tight;
+    @apply text-7xl md:text-8xl lg:text-9xl font-mooxy font-black leading-none tracking-tight;
   }
   
   .text-section-title {
-    @apply text-3xl md:text-4xl font-mooxy font-bold leading-tight;
+    @apply text-4xl md:text-5xl font-mooxy font-bold leading-tight tracking-tight;
   }
   
   .text-subsection-title {
@@ -120,7 +121,7 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -171,7 +172,7 @@
   100% { width: 100%; }
 }
 
-/* Light Theme Component Classes */
+/* Enhanced Component Classes */
 @layer components {
   .glass-card {
     background: var(--glass-bg);
@@ -188,8 +189,8 @@
   }
   
   .professional-button {
-    @apply px-6 py-3 bg-gray-900 text-white font-semibold rounded-xl transition-all duration-300 text-sm;
-    @apply hover:bg-gray-800 hover:shadow-lg hover:-translate-y-1;
+    @apply px-8 py-4 bg-gray-900 text-white font-semibold rounded-2xl transition-all duration-300 text-base;
+    @apply hover:bg-gray-800 hover:shadow-xl hover:-translate-y-1;
     letter-spacing: -0.01em;
     position: relative;
     overflow: hidden;
@@ -211,13 +212,13 @@
   }
   
   .professional-button-secondary {
-    @apply px-6 py-3 bg-white text-gray-900 font-semibold rounded-xl border-2 border-gray-200 transition-all duration-300 text-sm;
-    @apply hover:bg-gray-50 hover:border-gray-300 hover:shadow-md hover:-translate-y-1;
+    @apply px-8 py-4 bg-white text-gray-900 font-semibold rounded-2xl border-2 border-gray-200 transition-all duration-300 text-base;
+    @apply hover:bg-gray-50 hover:border-gray-300 hover:shadow-lg hover:-translate-y-1;
     letter-spacing: -0.01em;
   }
   
   .fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
+    animation: fadeInUp 1s ease-out forwards;
     opacity: 0;
   }
   
@@ -248,7 +249,7 @@
   }
   
   .text-gradient {
-    background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-emerald) 100%);
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-emerald) 50%, var(--text-primary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -314,9 +315,9 @@
   
   .frosted-glass {
     background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(16px);
+    backdrop-filter: blur(20px);
     border: 1px solid rgba(226, 232, 240, 0.5);
-    border-radius: 20px;
+    border-radius: 24px;
     box-shadow: var(--shadow-soft);
   }
 }
@@ -324,27 +325,20 @@
 /* Responsive Enhancements */
 @media (max-width: 768px) {
   .fade-in-up {
-    animation-duration: 0.6s;
+    animation-duration: 0.8s;
   }
   
   .professional-button,
   .professional-button-secondary {
-    @apply px-5 py-2.5 text-sm;
+    @apply px-6 py-3 text-sm;
   }
   
   .section-spacing {
     @apply py-12 lg:py-16;
   }
-}
-
-/* Accessibility & Performance */
-@media (prefers-reduced-motion: reduce) {
-  .fade-in-up,
-  .slide-in-left,
-  .hover-lift,
-  .animated-icon {
-    animation: none;
-    transition: none;
+  
+  .text-hero {
+    @apply text-5xl md:text-6xl;
   }
 }
 
@@ -382,4 +376,15 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, button {
 .static-text {
   animation: none !important;
   transition: none !important;
+}
+
+/* Accessibility & Performance */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-up,
+  .slide-in-left,
+  .hover-lift,
+  .animated-icon {
+    animation: none;
+    transition: none;
+  }
 }
