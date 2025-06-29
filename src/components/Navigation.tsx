@@ -25,20 +25,6 @@ const Navigation = () => {
     setIsMobileMenuOpen(false);
   };
 
-  const scrollToSection = (sectionId: string) => {
-    if (location.pathname !== '/') {
-      navigate('/');
-      setTimeout(() => {
-        const element = document.getElementById(sectionId);
-        element?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    } else {
-      const element = document.getElementById(sectionId);
-      element?.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsMobileMenuOpen(false);
-  };
-
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="frosted-glass border-b border-gray-200/50">
@@ -84,7 +70,7 @@ const Navigation = () => {
                 Blog
               </button>
               <button 
-                onClick={() => scrollToSection('contact')} 
+                onClick={() => navigateToPage('/get-started')} 
                 className="professional-button text-sm px-6 py-3"
               >
                 Get Started
@@ -132,7 +118,7 @@ const Navigation = () => {
                 Blog
               </button>
               <button 
-                onClick={() => scrollToSection('contact')} 
+                onClick={() => navigateToPage('/get-started')} 
                 className="professional-button text-sm w-full mt-4"
               >
                 Get Started
