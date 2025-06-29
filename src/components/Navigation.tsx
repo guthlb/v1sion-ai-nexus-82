@@ -38,7 +38,7 @@ const Navigation = () => {
                 </div>
               </div>
               <div className="text-3xl font-mooxy font-black text-gray-900">
-                V1S1ON
+                V1SION
               </div>
             </div>
 
@@ -61,6 +61,12 @@ const Navigation = () => {
                 className="text-gray-700 hover:text-gray-900 transition-colors font-agile font-semibold elegant-underline"
               >
                 Impact
+              </button>
+              <button 
+                onClick={() => scrollToSection('services')} 
+                className="text-gray-700 hover:text-gray-900 transition-colors font-agile font-semibold elegant-underline"
+              >
+                Blog
               </button>
               <button 
                 onClick={() => scrollToSection('contact')} 

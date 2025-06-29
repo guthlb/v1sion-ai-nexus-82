@@ -48,6 +48,7 @@ const Hero = () => {
               Schedule AI Readiness Assessment
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
             </button>
+            
             <button className="professional-button-secondary text-lg">
               Book Strategic Consultation
             </button>
