@@ -74,12 +74,12 @@
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 900;
     letter-spacing: -0.025em;
-    line-height: 0.85;
+    line-height: 0.9;
   }
   
   .font-agile {
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: -0.01em;
   }
   
@@ -87,9 +87,9 @@
     font-family: 'JetBrains Mono', monospace;
   }
   
-  /* Enhanced Typography Scale */
+  /* Balanced Typography Scale */
   .text-hero {
-    @apply text-7xl md:text-8xl lg:text-9xl font-mooxy font-black leading-none tracking-tight;
+    @apply text-5xl md:text-6xl lg:text-7xl font-mooxy font-black leading-tight tracking-tight;
   }
   
   .text-section-title {
@@ -194,6 +194,7 @@
     letter-spacing: -0.01em;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   }
   
   .professional-button::before {
@@ -212,9 +213,10 @@
   }
   
   .professional-button-secondary {
-    @apply px-8 py-4 bg-white text-gray-900 font-semibold rounded-2xl border-2 border-gray-200 transition-all duration-300 text-base;
-    @apply hover:bg-gray-50 hover:border-gray-300 hover:shadow-lg hover:-translate-y-1;
+    @apply px-8 py-4 bg-white text-gray-900 font-semibold rounded-2xl border-2 border-gray-300 transition-all duration-300 text-base;
+    @apply hover:bg-gray-50 hover:border-gray-400 hover:shadow-lg hover:-translate-y-1;
     letter-spacing: -0.01em;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   }
   
   .fade-in-up {
@@ -338,7 +340,7 @@
   }
   
   .text-hero {
-    @apply text-5xl md:text-6xl;
+    @apply text-4xl md:text-5xl;
   }
 }
 
