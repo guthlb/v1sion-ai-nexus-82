@@ -48,31 +48,31 @@ const Navigation = () => {
             <div className="hidden md:flex items-center space-x-8">
               <button 
                 onClick={() => navigateToPage('/our-approach')} 
-                className="text-black/90 hover:text-black transition-colors font-agile font-semibold elegant-underline drop-shadow-md"
+                className="text-white/90 hover:text-white transition-colors font-agile font-semibold elegant-underline drop-shadow-md"
               >
                 Our Approach
               </button>
               <button 
                 onClick={() => navigateToPage('/services')} 
-                className="text-black/90 hover:text-black transition-colors font-agile font-semibold elegant-underline drop-shadow-md"
+                className="text-white/90 hover:text-white transition-colors font-agile font-semibold elegant-underline drop-shadow-md"
               >
                 Services
               </button>
               <button 
                 onClick={() => navigateToPage('/impact')} 
-                className="text-black/90 hover:text-black transition-colors font-agile font-semibold elegant-underline drop-shadow-md"
+                className="text-white/90 hover:text-white transition-colors font-agile font-semibold elegant-underline drop-shadow-md"
               >
                 Impact
               </button>
               <button 
                 onClick={() => navigateToPage('/blog')} 
-                className="text-black/90 hover:text-black transition-colors font-agile font-semibold elegant-underline drop-shadow-md"
+                className="text-white/90 hover:text-white transition-colors font-agile font-semibold elegant-underline drop-shadow-md"
               >
                 Blog
               </button>
               <button 
                 onClick={() => navigateToPage('/kits')} 
-                className="text-black/90 hover:text-black transition-colors font-agile font-semibold elegant-underline drop-shadow-md"
+                className="text-white/90 hover:text-white transition-colors font-agile font-semibold elegant-underline drop-shadow-md"
               >
                 Kits
               </button>
@@ -90,9 +90,9 @@ const Navigation = () => {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? (
-                <X className="w-6 h-6 text-black" />
+                <X className="w-6 h-6 text-white" />
               ) : (
-                <Menu className="w-6 h-6 text-black" />
+                <Menu className="w-6 h-6 text-white" />
               )}
             </button>
           </div>
@@ -102,31 +102,31 @@ const Navigation = () => {
             <div className="md:hidden mt-4 backdrop-blur-md bg-white/30 p-6 space-y-4 rounded-2xl border border-white/20">
               <button 
                 onClick={() => navigateToPage('/our-approach')} 
-                className="block w-full text-left text-black/90 hover:text-black transition-colors font-agile font-semibold py-3 elegant-underline"
+                className="block w-full text-left text-white/90 hover:text-white transition-colors font-agile font-semibold py-3 elegant-underline"
               >
                 Our Approach
               </button>
               <button 
                 onClick={() => navigateToPage('/services')} 
-                className="block w-full text-left text-black/90 hover:text-black transition-colors font-agile font-semibold py-3 elegant-underline"
+                className="block w-full text-left text-white/90 hover:text-white transition-colors font-agile font-semibold py-3 elegant-underline"
               >
                 Services
               </button>
               <button 
                 onClick={() => navigateToPage('/impact')} 
-                className="block w-full text-left text-black/90 hover:text-black transition-colors font-agile font-semibold py-3 elegant-underline"
+                className="block w-full text-left text-white/90 hover:text-white transition-colors font-agile font-semibold py-3 elegant-underline"
               >
                 Impact
               </button>
               <button 
                 onClick={() => navigateToPage('/blog')} 
-                className="block w-full text-left text-black/90 hover:text-black transition-colors font-agile font-semibold py-3 elegant-underline"
+                className="block w-full text-left text-white/90 hover:text-white transition-colors font-agile font-semibold py-3 elegant-underline"
               >
                 Blog
               </button>
               <button 
                 onClick={() => navigateToPage('/kits')} 
-                className="block w-full text-left text-black/90 hover:text-black transition-colors font-agile font-semibold py-3 elegant-underline"
+                className="block w-full text-left text-white/90 hover:text-white transition-colors font-agile font-semibold py-3 elegant-underline"
               >
                 Kits
               </button>
