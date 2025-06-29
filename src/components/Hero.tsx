@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowRight, Mail, Phone, Sparkles } from 'lucide-react';
 
@@ -32,13 +31,14 @@ const Hero = () => {
             <span className="block text-gradient mt-4">
               Transformation
             </span>
-            <span className="block text-2xl md:text-3xl font-agile text-gray-600 mt-8 font-normal">
-              for the Enterprise
-            </span>
           </h1>
           
-          {/* Sophisticated Subheadline */}
-          <p className="text-2xl md:text-3xl font-agile text-gray-700 mb-16 max-w-4xl mx-auto fade-in-up leading-relaxed" style={{animationDelay: '0.3s'}}>
+          {/* Sophisticated Subheadline - Moved closer to buttons */}
+          <p className="text-2xl md:text-3xl font-agile text-gray-700 mb-8 max-w-4xl mx-auto fade-in-up leading-relaxed" style={{animationDelay: '0.3s'}}>
+            for the Enterprise
+          </p>
+          
+          <p className="text-xl md:text-2xl font-agile text-gray-600 mb-12 max-w-4xl mx-auto fade-in-up leading-relaxed" style={{animationDelay: '0.4s'}}>
             Building Tomorrow's AI-Native Organizations Today
           </p>
           
