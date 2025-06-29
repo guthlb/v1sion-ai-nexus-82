@@ -1,88 +1,83 @@
+
 import React from 'react';
 import { ArrowRight, Mail, Phone, Sparkles } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-end justify-center bg-white overflow-hidden pb-8">
-      {/* Subtle Background Elements */}
+    <section className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
+      {/* Animated Digital Mesh Background */}
+      <div className="absolute inset-0 digital-mesh opacity-40" />
+      
+      {/* Subtle Data Flow Lines */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200/40 to-transparent" />
-        <div className="absolute bottom-1/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-200/30 to-transparent" />
+        <div className="absolute top-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent data-flow" />
+        <div className="absolute top-3/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-600/20 to-transparent data-flow" style={{animationDelay: '1.5s'}} />
       </div>
       
-      {/* Content - Positioned at the very bottom of viewport */}
-      <div className="section-container relative z-10 w-full">
-        <div className="max-w-6xl mx-auto text-center">
+      {/* Content */}
+      <div className="section-container relative z-10">
+        <div className="max-w-5xl mx-auto text-center">
           
           {/* Professional Badge */}
-          <div className="mb-20 inline-flex items-center gap-3 frosted-glass px-8 py-4 hover-lift">
-            <Sparkles className="w-5 h-5 text-emerald-600" />
-            <span className="text-sm font-medium text-gray-700 tracking-wide">Enterprise AI Transformation</span>
+          <div className="mb-8 inline-flex items-center gap-2 frosted-glass px-6 py-3 hover-lift">
+            <Sparkles className="w-5 h-5 text-amber-600 animated-icon" />
+            <span className="text-sm font-semibold text-gray-800 tracking-wide">Enterprise AI Transformation</span>
           </div>
 
-          {/* Main Headline - Positioned at Bottom of Viewport */}
-          <div className="mb-16">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-mooxy font-black text-gray-900 leading-[0.9] tracking-tight fade-in-up">
+          {/* Main Headline with Animated Reveal */}
+          <h1 className="text-6xl md:text-8xl font-mooxy font-bold mb-8 leading-tight fade-in-up">
+            <span className="block text-gray-900">
               Strategic AI-Native
-              <br />
-              <span className="text-gray-400 font-light">
-                Transformation
-              </span>
-              <br />
-              <span className="text-4xl md:text-5xl lg:text-6xl font-agile font-bold text-gray-700 tracking-wide leading-tight mt-4 block">
-                for the Enterprise
-              </span>
-            </h1>
-          </div>
+            </span>
+            <span className="block text-gradient mt-4">
+              Transformation
+            </span>
+            <span className="block text-2xl md:text-3xl font-agile text-gray-600 mt-8 font-normal">
+              for the Enterprise
+            </span>
+          </h1>
           
-          {/* Supporting Line - Much Bolder and More Prominent */}
-          <div className="mb-24 fade-in-up" style={{animationDelay: '0.2s'}}>
-            <p className="text-2xl md:text-3xl lg:text-4xl font-agile font-bold text-gray-600 max-w-5xl mx-auto leading-relaxed tracking-wide">
-              Building Tomorrow's AI-Native Organizations Today
-            </p>
-          </div>
+          {/* Sophisticated Subheadline */}
+          <p className="text-2xl md:text-3xl font-agile text-gray-700 mb-16 max-w-4xl mx-auto fade-in-up leading-relaxed" style={{animationDelay: '0.3s'}}>
+            Building Tomorrow's AI-Native Organizations Today
+          </p>
           
-          {/* CTA Buttons - Much Bolder and More Prominent */}
-          <div className="mb-28 fade-in-up" style={{animationDelay: '0.4s'}}>
-            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center max-w-5xl mx-auto">
-              <button className="group inline-flex items-center justify-center gap-4 px-12 py-6 bg-gray-900 text-white font-bold text-xl rounded-2xl transition-all duration-300 hover:bg-gray-800 hover:shadow-2xl hover:-translate-y-2 w-full sm:w-auto sm:min-w-[380px] shadow-xl border-2 border-gray-900">
-                <span className="font-black tracking-wide">Schedule AI Readiness Assessment</span>
-                <ArrowRight className="w-6 h-6 transition-transform group-hover:translate-x-2" />
-              </button>
-              
-              <button className="inline-flex items-center justify-center px-12 py-6 bg-white text-gray-900 font-bold text-xl rounded-2xl border-3 border-gray-400 transition-all duration-300 hover:bg-gray-50 hover:border-gray-500 hover:shadow-xl hover:-translate-y-2 w-full sm:w-auto sm:min-w-[380px] shadow-lg">
-                <span className="font-black tracking-wide">Book Strategic Consultation</span>
-              </button>
-            </div>
+          {/* Elegant CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-20 fade-in-up" style={{animationDelay: '0.6s'}}>
+            <button className="professional-button group flex items-center justify-center gap-4 text-lg">
+              Schedule AI Readiness Assessment
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
+            </button>
+            
+            <button className="professional-button-secondary text-lg">
+              Book Strategic Consultation
+            </button>
           </div>
 
-          {/* Contact Information - Enhanced Visibility */}
-          <div className="fade-in-up" style={{animationDelay: '0.6s'}}>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-12">
-              <div className="group flex items-center gap-4 px-10 py-5 frosted-glass hover-lift transition-all duration-300 shadow-lg">
-                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-600 p-0.5">
-                  <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
-                    <Mail className="w-7 h-7 text-gray-800" />
-                  </div>
+          {/* Refined Contact Info */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-gray-700 fade-in-up" style={{animationDelay: '0.9s'}}>
+            <div className="frosted-glass px-6 py-4 flex items-center gap-3 hover-lift elegant-underline">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 to-emerald-600 p-0.5">
+                <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
+                  <Mail className="w-5 h-5 text-gray-800" />
                 </div>
-                <span className="font-bold text-xl text-gray-700">hello@v1sion.ai</span>
               </div>
-              
-              <div className="group flex items-center gap-4 px-10 py-5 frosted-glass hover-lift transition-all duration-300 shadow-lg">
-                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-gray-700 to-gray-800 p-0.5">
-                  <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
-                    <Phone className="w-7 h-7 text-gray-800" />
-                  </div>
+              <span className="font-semibold text-lg">hello@v1sion.ai</span>
+            </div>
+            <div className="frosted-glass px-6 py-4 flex items-center gap-3 hover-lift elegant-underline">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-600 to-amber-500 p-0.5">
+                <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
+                  <Phone className="w-5 h-5 text-gray-800" />
                 </div>
-                <span className="font-bold text-xl text-gray-700">+91-9876543210</span>
               </div>
+              <span className="font-semibold text-lg">+91-9876543210</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Minimal Bottom Accent */}
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-64 h-24 bg-gradient-to-t from-gray-50/50 to-transparent" />
+      {/* Ambient Bottom Gradient */}
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-96 h-32 bg-gradient-to-t from-amber-50 to-transparent opacity-50" />
     </section>
   );
 };
