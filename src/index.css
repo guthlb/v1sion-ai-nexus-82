@@ -87,16 +87,16 @@
     font-family: 'JetBrains Mono', monospace;
   }
   
-  /* Tomorrow Font for Hero */
+  /* Tomorrow Font for Hero - Non-Bold */
   .font-tomorrow {
     font-family: 'Tomorrow', sans-serif;
-    font-weight: 800;
-    letter-spacing: -0.02em;
+    font-weight: 500;
+    letter-spacing: -0.01em;
   }
   
   /* Typography Scale */
   .text-hero {
-    @apply text-5xl md:text-7xl font-tomorrow font-black leading-tight;
+    @apply text-5xl md:text-7xl font-tomorrow font-medium leading-tight;
   }
   
   .text-section-title {
