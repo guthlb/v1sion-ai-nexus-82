@@ -3,29 +3,29 @@ import { ArrowRight, Mail, Phone, Sparkles } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-end justify-center bg-white overflow-hidden pb-16">
+    <section className="relative min-h-screen flex items-end justify-center bg-white overflow-hidden pb-8">
       {/* Subtle Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200/40 to-transparent" />
         <div className="absolute bottom-1/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-200/30 to-transparent" />
       </div>
       
-      {/* Content - Positioned much lower in viewport */}
+      {/* Content - Positioned at the very bottom of viewport */}
       <div className="section-container relative z-10 w-full">
         <div className="max-w-6xl mx-auto text-center">
           
           {/* Professional Badge */}
-          <div className="mb-16 inline-flex items-center gap-3 frosted-glass px-8 py-4 hover-lift">
+          <div className="mb-20 inline-flex items-center gap-3 frosted-glass px-8 py-4 hover-lift">
             <Sparkles className="w-5 h-5 text-emerald-600" />
             <span className="text-sm font-medium text-gray-700 tracking-wide">Enterprise AI Transformation</span>
           </div>
 
-          {/* Main Headline - Positioned Much Lower */}
-          <div className="mb-12">
+          {/* Main Headline - Positioned at Bottom of Viewport */}
+          <div className="mb-16">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-mooxy font-black text-gray-900 leading-[0.9] tracking-tight fade-in-up">
               Strategic AI-Native
               <br />
-              <span className="text-gradient bg-gradient-to-r from-gray-900 via-emerald-700 to-gray-900 bg-clip-text text-transparent">
+              <span className="text-gray-400 font-light">
                 Transformation
               </span>
               <br />
@@ -36,14 +36,14 @@ const Hero = () => {
           </div>
           
           {/* Supporting Line - Much Bolder and More Prominent */}
-          <div className="mb-20 fade-in-up" style={{animationDelay: '0.2s'}}>
+          <div className="mb-24 fade-in-up" style={{animationDelay: '0.2s'}}>
             <p className="text-2xl md:text-3xl lg:text-4xl font-agile font-bold text-gray-600 max-w-5xl mx-auto leading-relaxed tracking-wide">
               Building Tomorrow's AI-Native Organizations Today
             </p>
           </div>
           
           {/* CTA Buttons - Much Bolder and More Prominent */}
-          <div className="mb-24 fade-in-up" style={{animationDelay: '0.4s'}}>
+          <div className="mb-28 fade-in-up" style={{animationDelay: '0.4s'}}>
             <div className="flex flex-col sm:flex-row gap-8 justify-center items-center max-w-5xl mx-auto">
               <button className="group inline-flex items-center justify-center gap-4 px-12 py-6 bg-gray-900 text-white font-bold text-xl rounded-2xl transition-all duration-300 hover:bg-gray-800 hover:shadow-2xl hover:-translate-y-2 w-full sm:w-auto sm:min-w-[380px] shadow-xl border-2 border-gray-900">
                 <span className="font-black tracking-wide">Schedule AI Readiness Assessment</span>
